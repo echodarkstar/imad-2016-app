@@ -19,6 +19,16 @@ var pageone = {
     heading: 'Page 1',
     content: lorem 
 };
+var pagetwo = {
+    title: 'Page 2 | Nishant\'s webapp',
+    heading: 'Page 2',
+    content: lorem 
+};
+var pagethree = {
+    title: 'Page 3 | Nishant\'s webapp',
+    heading: 'Page 3',
+    content: lorem 
+};
 
 function createTemplate(data){
     var title = data.title;
@@ -37,8 +47,6 @@ function createTemplate(data){
             <div class="container">
             	<div>
             	    <a href="/">Home</a>
-            	    <a href="/page2.html">Page 2</a>
-            	    <a href="/page3.html">Page 3</a>
             	</div>
             	<hr/>
             	<h3>
@@ -73,11 +81,11 @@ app.get('/page1.html', function(req,res) {
 });
 
 app.get('/page2.html', function(req,res) {
-    res.sendFile(path.join(__dirname,'ui','page2.html'));
+    res.send(createTemplate(pagetwo));
 });
 
 app.get('/page3.html', function(req,res) {
-    res.sendFile(path.join(__dirname,'ui','page3.html'));
+    res.send(createTemplate(pagethree));
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
