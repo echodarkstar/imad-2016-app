@@ -5,10 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var pageone = {
-    title: 'Page 1 | Nishant\'s webapp',
-    heading: 'Page 1',
-    content: `
+var lorem= `
      <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nisi ultricies, sodales leo eu, commodo libero. Praesent blandit est dui, quis venenatis magna placerat at. Etiam ac imperdiet lorem, consectetur ullamcorper metus. Donec id libero sit amet nulla tempus aliquam a quis mauris. Nulla facilisis ligula ut commodo faucibus. Curabitur iaculis interdum sem. In ac malesuada elit. Vivamus eu elit quis metus cursus molestie.
     </p>
@@ -16,7 +13,11 @@ var pageone = {
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nisi ultricies, sodales leo eu, commodo libero. Praesent blandit est dui, quis venenatis magna placerat at. Etiam ac imperdiet lorem, consectetur ullamcorper metus. Donec id libero sit amet nulla tempus aliquam a quis mauris. Nulla facilisis ligula ut commodo faucibus. Curabitur iaculis interdum sem. In ac malesuada elit. Vivamus eu elit quis metus cursus molestie.
     </p>
-    `
+    `;
+var pageone = {
+    title: 'Page 1 | Nishant\'s webapp',
+    heading: 'Page 1',
+    content: lorem 
 };
 
 function createTemplate(data){
@@ -53,10 +54,6 @@ function createTemplate(data){
     
     return htmlTemp;
 }
-
-
-
-
 
 
 app.get('/', function (req, res) {
