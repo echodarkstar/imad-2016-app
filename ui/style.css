@@ -8,10 +8,10 @@ html {
 
 .hexagon {
   position: relative;
-  width: 300px; 
-  height: 173.21px;
+  width: 200px; 
+  height: 115.47px;
   background-color: #3072e0;
-  margin: 86.60px 0;
+  margin: 57.74px 0;
   border-left: solid 5px #333333;
   border-right: solid 5px #333333;
 }
@@ -21,23 +21,23 @@ html {
   content: "";
   position: absolute;
   z-index: 1;
-  width: 212.13px;
-  height: 212.13px;
+  width: 141.42px;
+  height: 141.42px;
   -webkit-transform: scaleY(0.5774) rotate(-45deg);
   -ms-transform: scaleY(0.5774) rotate(-45deg);
   transform: scaleY(0.5774) rotate(-45deg);
   background-color: inherit;
-  left: 38.9340px;
+  left: 24.2893px;
 }
 
 .hexagon:before {
-  top: -106.0660px;
+  top: -70.7107px;
   border-top: solid 7.0711px #333333;
   border-right: solid 7.0711px #333333;
 }
 
 .hexagon:after {
-  bottom: -106.0660px;
+  bottom: -70.7107px;
   border-bottom: solid 7.0711px #333333;
   border-left: solid 7.0711px #333333;
 }
