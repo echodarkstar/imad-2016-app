@@ -1,5 +1,5 @@
 body {
-    background-image: url(/ui/fog.jpg);
+    background: url(/ui/fog.jpg) repeat 0 0;
 }
 
 .center {
