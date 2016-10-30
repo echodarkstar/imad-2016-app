@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-image: url("bg.jpg");
+    background-image: url(/ui/bg.jpg);
     margin-top: 75px;
 }
 
