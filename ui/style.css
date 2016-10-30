@@ -1,6 +1,5 @@
 body {
-    background-image: url(/ui/bg.jpg);
-    
+    background-image: url('/ui/bg.jpg');
 }
 
 .center {
