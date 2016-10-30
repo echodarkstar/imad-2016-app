@@ -1,19 +1,32 @@
 html { 
-  background: url(/ui/fog.jpg) no-repeat center center fixed; 
+  background: url(fog.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+.container{
+  position:relative;
+  width: 40%;
+  background: #ca0164;
+  background-color: rgba(27,45,90,0);
+  margin:0 auto;
+
+}
+.container:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
 .hexagon {
-  position: relative;
-  width: 200px; 
-  height: 115.47px;
+  cursor: pointer;
+  position: absolute;
+  width: 150px; 
+  height: 86.60px;
   background-color: #3072e0;
-  margin: 57.74px 0;
-  margin: 0 auto;
-  top: 30%;
+
 }
 
 .hexagon:before,
@@ -21,18 +34,44 @@ html {
   content: "";
   position: absolute;
   width: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
+  border-left: 74.5px solid transparent;
+  border-right: 75.5px solid transparent;
+
 }
 
 .hexagon:before {
   bottom: 100%;
-  border-bottom: 57.74px solid #3072e0;
+  border-bottom: 43.30px solid #3072e0;
 }
 
 .hexagon:after {
   top: 100%;
   width: 0;
-  border-top: 57.74px solid #3072e0;
+  border-top: 43.30px solid #3072e0;
+}
+
+.hex1 {
+  top:30%;
+  left:calc(50% - 75px);
+}
+
+.hex2 {
+  top:calc(30% + 86.6px + 43.3px);
+  left:calc(50% - 150px - 5px);
+}
+
+.hex3 {
+  top:calc(30% + 86.6px + 43.3px);
+  left:calc(50% + 5px)
+}
+
+.hexagon:hover {
+  fill-opacity: 1;
+  stroke: #ff0000;
+  stroke-width: 5;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
 }
 
