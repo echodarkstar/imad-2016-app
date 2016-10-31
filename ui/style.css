@@ -1,10 +1,92 @@
 html { 
-  background: url(fog.jpg) no-repeat center center fixed; 
+  background: url(fog.jpg) no-repeat fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: center center;
 }
+
+.about-photo {
+  position:absolute;
+  opacity: 0;
+  width:40%;
+  height:80%;
+  top: calc(5% + (0.4*150px));
+  left:0%;
+  background-color: #fff;
+  z-index: 0;
+  transition: left 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.ab1 {
+  position: absolute;
+  opacity: 0;
+  width: 40%;
+  height: 40%;
+  top: calc(5% + (0.4*150px));
+  left: 60%;
+  background-color: #fff;
+  z-index: 0;
+  transition: left 450ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.ab2 {
+  position: absolute;
+  opacity: 0;
+  width: 40%;
+  height: 40%;
+  top: calc(5% + (0.4*150px) + 40%);
+  left: 60%;
+  background-color: #ffa;
+  z-index: 0;
+  transition: left 650ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.aboutani {
+  opacity:1;
+  left:10%;
+}
+
+.abani {
+  opacity: 1;
+  left: 50%;
+}
+
+.work {
+  position:absolute;
+  opacity: 0;
+  width:80%;
+  height:80%;
+  top: calc(0.4*150px);
+  left:20%;
+  background-color: #fff;
+  z-index: 0;
+  transition: left 600ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.workani {
+  opacity:1;
+  left: calc(50% - 75px - 5px - 35%);
+}
+
+.contact {
+  position:absolute;
+  opacity: 0;
+  width:80%;
+  height:80%;
+  top: calc(0.4*150px);
+  left:0%;
+  background-color: #fff;
+  z-index: 0;
+  transition: left 600ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.conani {
+  opacity:1;
+  left: calc(50% - 75px - 5px - 35%);
+}
+
 .hexagon {
   position: absolute;
   width: 150px; 
@@ -12,6 +94,7 @@ html {
   background-color: #3072e0;
   visibility: visible;
   opacity: 1;
+  z-index: 1;
 
 }
 
@@ -42,7 +125,6 @@ html {
   transform:scale(1);
   background-position: 50%;
   transition: transform 300ms ease-in-out, top 300ms ease-in-out,visibility 300ms ease-in-out, opacity 300ms ease-in-out;
-  
 }
 
 .hex2 {
@@ -73,11 +155,12 @@ html {
 .hex3ani {
   transform:scale(0.4);
   top:80%;
-  left:calc(50% + 5px + 35%)
+  left:calc(50% - 150px - 5px - 35% + 80%)
 }
 
 .hidden {
   visibility: hidden;
   opacity: 0;
 }
+
 
