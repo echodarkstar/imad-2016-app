@@ -7,13 +7,140 @@ html {
   background-position: center center;
 }
 
+.name {
+  text-align: center;
+  font-family: 'Bungee Hairline', cursive;
+  font-size: 60px;
+  margin:0;
+  padding: 0;
+  animation: open ease-in-out 2.5s forwards;
+}
+
+@keyframes open {
+  0% {
+    opacity:0;
+    font-size: 100px;
+  }
+
+  40% {
+    opacity:0.6;
+  }
+
+  60% {
+    opacity: 0.4
+  }
+  80%{
+    opacity: 0.8;
+  }
+  100% {
+    opacity:1;
+    font-size: 60px;
+  }
+}
+
+/*.container {
+  animation: fadein 3.5s ease-in-out forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity: 1;
+  }
+}*/
+
+.hexagon {
+  position: absolute;
+  width: 150px; 
+  height: 86.60px;
+  background-color: #3072e0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 300ms forwards ease-in-out;
+
+}
+.activate {
+  visibility: visible;
+  opacity: 1;
+}
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 74.5px solid transparent;
+  border-right: 75.5px solid transparent;
+
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 43.30px solid #3072e0;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 43.30px solid #3072e0;
+}
+
+.hex1 {
+  
+  top:30%;
+  left:calc(50% - 75px);
+  transform:scale(1);
+  background-position: 50%;
+  transition: transform 300ms ease-in-out, top 300ms ease-in-out,visibility 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.hex2 {
+  
+  top:calc(30% + 86.6px + 43.3px);
+  left:calc(50% - 150px - 5px);
+  transform: scale(1);
+  transition: transform 300ms ease-in-out, top 300ms ease-in-out, left 300ms ease-in-out,visibility 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.hex3 {
+  
+  top:calc(30% + 86.6px + 43.3px);
+  left:calc(50% + 5px);
+  transform: scale(1);
+  transition: transform 300ms ease-in-out, top 300ms ease-in-out, left 300ms ease-in-out,visibility 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.hex1ani {
+  transform:scale(0.4);
+  top:5%;
+}
+
+.hex2ani {
+  transform:scale(0.4);
+  top:80%;
+  left:calc(50% - 150px - 5px - 35%);
+}
+
+.hex3ani {
+  transform:scale(0.4);
+  top:80%;
+  left:calc(50% - 150px - 5px - 35% + 80%)
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .about-photo {
   position:absolute;
   opacity: 0;
   width:40%;
   height:80%;
   top: calc(5% + (0.4*150px));
-  left:0%;
+  left:0;
   background-color: #fff;
   z-index: 0;
   transition: left 300ms ease-in-out, opacity 300ms ease-in-out;
@@ -76,7 +203,7 @@ html {
   width:80%;
   height:80%;
   top: calc(0.4*150px);
-  left:0%;
+  left:0;
   background-color: #fff;
   z-index: 0;
   transition: left 600ms ease-in-out, opacity 300ms ease-in-out;
@@ -86,81 +213,3 @@ html {
   opacity:1;
   left: calc(50% - 75px - 5px - 35%);
 }
-
-.hexagon {
-  position: absolute;
-  width: 150px; 
-  height: 86.60px;
-  background-color: #3072e0;
-  visibility: visible;
-  opacity: 1;
-  z-index: 1;
-
-}
-
-.hexagon:before,
-.hexagon:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 74.5px solid transparent;
-  border-right: 75.5px solid transparent;
-
-}
-
-.hexagon:before {
-  bottom: 100%;
-  border-bottom: 43.30px solid #3072e0;
-}
-
-.hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 43.30px solid #3072e0;
-}
-
-.hex1 {
-  top:30%;
-  left:calc(50% - 75px);
-  transform:scale(1);
-  background-position: 50%;
-  transition: transform 300ms ease-in-out, top 300ms ease-in-out,visibility 300ms ease-in-out, opacity 300ms ease-in-out;
-}
-
-.hex2 {
-  top:calc(30% + 86.6px + 43.3px);
-  left:calc(50% - 150px - 5px);
-  transform: scale(1);
-  transition: transform 300ms ease-in-out, top 300ms ease-in-out, left 300ms ease-in-out,visibility 300ms ease-in-out, opacity 300ms ease-in-out;
-}
-
-.hex3 {
-  top:calc(30% + 86.6px + 43.3px);
-  left:calc(50% + 5px);
-  transform: scale(1);
-  transition: transform 300ms ease-in-out, top 300ms ease-in-out, left 300ms ease-in-out,visibility 300ms ease-in-out, opacity 300ms ease-in-out;
-}
-
-.hex1ani {
-  transform:scale(0.4);
-  top:5%;
-}
-
-.hex2ani {
-  transform:scale(0.4);
-  top:80%;
-  left:calc(50% - 150px - 5px - 35%);
-}
-
-.hex3ani {
-  transform:scale(0.4);
-  top:80%;
-  left:calc(50% - 150px - 5px - 35% + 80%)
-}
-
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-}
-
-
