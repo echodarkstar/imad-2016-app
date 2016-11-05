@@ -76,6 +76,14 @@ app.get('/ui/fog.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'fog.jpg'));
 });
 
+app.get('/ui/me2.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'me2.png'));
+});
+
+app.get('/ui/poly.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'poly.jpg'));
+});
+
 app.get('/page1.html', function(req,res) {
     res.send(createTemplate(pageone));
 });
