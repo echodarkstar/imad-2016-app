@@ -1,5 +1,5 @@
 html { 
-  background: url(fog.jpg) no-repeat fixed; 
+  background: url(/ui/fog.jpg) no-repeat fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,7 +13,7 @@ html {
   font-size: 60px;
   margin:0;
   padding: 0;
-  animation: open ease-in-out 2.5s forwards;
+  animation: open ease-in-out 1s forwards;
 }
 
 @keyframes open {
@@ -30,7 +30,7 @@ html {
     opacity: 0.4
   }
   80%{
-    opacity: 0.8;
+    opacity:0.8;
   }
   100% {
     opacity:1;
@@ -38,64 +38,99 @@ html {
   }
 }
 
-/*.container {
-  animation: fadein 3.5s ease-in-out forwards;
-}
-
-@keyframes fadein {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity: 1;
-  }
-}*/
 
 .hexagon {
   position: absolute;
   width: 150px; 
   height: 86.60px;
-  background-color: #3072e0;
+  margin: 0;
+  background-image: url(/ui/poly.jpg);
+  background-size: auto 173.2051px;
+  background-position: center;
   visibility: hidden;
   opacity: 0;
   z-index: 1;
   transition: opacity 300ms forwards ease-in-out;
+}
 
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 106.07px;
+  height: 106.07px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 21.97px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 150.0000px;
+  height: 86.60254037844388px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -53.0330px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -53.0330px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 150.0000px;
+  height: 86.6025px;
+  z-index: 2;
+  background: inherit;
 }
 .activate {
   visibility: visible;
   opacity: 1;
 }
-.hexagon:before,
-.hexagon:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 74.5px solid transparent;
-  border-right: 75.5px solid transparent;
 
-}
-
-.hexagon:before {
-  bottom: 100%;
-  border-bottom: 43.30px solid #3072e0;
-}
-
-.hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 43.30px solid #3072e0;
-}
 
 .hex1 {
   
-  top:30%;
+  top:29%;
   left:calc(50% - 75px);
   transform:scale(1);
-  background-position: 50%;
   transition: transform 300ms ease-in-out, top 300ms ease-in-out,visibility 300ms ease-in-out, opacity 300ms ease-in-out;
 }
 
+.aboutme {
+  text-align: center;
+  margin:0;
+  padding:0;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 60px;
+
+}
 .hex2 {
   
   top:calc(30% + 86.6px + 43.3px);
@@ -137,13 +172,18 @@ html {
 .about-photo {
   position:absolute;
   opacity: 0;
-  width:40%;
-  height:80%;
-  top: calc(5% + (0.4*150px));
-  left:0;
-  background-color: #fff;
+  width:100%;
+  height:100%;
+  top: 0%;
+  left:0%;
+  margin:0;
+  padding: 0;
+  background: url(/ui/me2.png) no-repeat;
+  /*background-origin: content-box;*/
+  background-size: 20% 20%;
   z-index: 0;
-  transition: left 300ms ease-in-out, opacity 300ms ease-in-out;
+  transform: scale(0.5);
+  transition: opacity 300ms ease-in-out;
 }
 
 .ab1 {
@@ -172,7 +212,6 @@ html {
 
 .aboutani {
   opacity:1;
-  left:10%;
 }
 
 .abani {
@@ -203,7 +242,7 @@ html {
   width:80%;
   height:80%;
   top: calc(0.4*150px);
-  left:0;
+  left:0%;
   background-color: #fff;
   z-index: 0;
   transition: left 600ms ease-in-out, opacity 300ms ease-in-out;
