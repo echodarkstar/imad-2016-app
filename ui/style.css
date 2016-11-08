@@ -1,5 +1,5 @@
 html { 
-  background: url(fog.jpg) no-repeat fixed; 
+  background: url(/ui/fog.jpg) no-repeat fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -53,7 +53,7 @@ html {
   width: 150px; 
   height: 86.60px;
   margin: 0;
-  background-image: url(poly.jpg);
+  background-image: url(/ui/poly.jpg);
   background-size: auto 173.2051px;
   background-position: center;
   visibility: hidden;
