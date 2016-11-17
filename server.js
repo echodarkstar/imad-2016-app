@@ -67,7 +67,7 @@ function createTemplate(data){
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/blog.html', function (req, res) {
+app.get('/ui/blog.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
 });
 app.get('/ui/style.css', function (req, res) {
