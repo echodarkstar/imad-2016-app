@@ -67,23 +67,42 @@ function createTemplate(data){
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+app.get('/blog.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-
-app.get('/ui/fog.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'fog.jpg'));
+app.get('/ui/blogstyle.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blogstyle.css'));
 });
 
-app.get('/ui/me2.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'me2.png'));
+app.get('/img/poly.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'img', 'poly.jpg'));
 });
 
-app.get('/ui/poly.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'poly.jpg'));
+app.get('/img/me2.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'img', 'me2.png'));
 });
 
+app.get('/img/darkstar.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'img', 'darkstar.jpg'));
+});
+app.get('/img/enigma.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'img', 'enigma.jpg'));
+});
+app.get('/img/echeresque.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'img', 'echeresque.png'));
+});
+app.get('/img/temp.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'img', 'temp.jpg'));
+});
+app.get('/img/enigma.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'img', 'enigma.jpg'));
+});
+app.get('/img/articlebg.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'img', 'articlebg.jpg'));
+});
 app.get('/page1.html', function(req,res) {
     res.send(createTemplate(pageone));
 });
