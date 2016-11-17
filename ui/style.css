@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html { 
   /*background thanks to subtlepatterns.com*/
   background: url(../img/escheresque.png); 
@@ -435,3 +436,309 @@ img {
   border-width: 1px;
   border-color: black;
 }*/
+=======
+html { 
+  background: url(/ui/fog.jpg) no-repeat fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.name {
+  text-align: center;
+  font-family: 'Bungee Hairline', cursive;
+  font-size: 60px;
+  margin:0px;
+  padding: 0px;
+  animation: open ease-in-out 1s forwards;
+}
+
+@keyframes open {
+  0% {
+    opacity:0;
+    font-size: 100px;
+  }
+
+  40% {
+    opacity:0.6;
+  }
+
+  60% {
+    opacity: 0.4;
+  }
+  80%{
+    opacity: 0.8;
+  }
+  100% {
+    opacity:1;
+    font-size: 60px;
+  }
+}
+
+
+.hexagon {
+  position: absolute;
+  width: 150px; 
+  height: 86.60px;
+  margin: 0;
+  background-image: url(/ui/poly.jpg);
+  background-size: auto 173.2051px;
+  background-position: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 300ms forwards ease-in-out;
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 106.07px;
+  height: 106.07px;
+  overflow: hidden;
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 21.97px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 150.0000px;
+  height: 86.60254037844388px;
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -53.0330px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -53.0330px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 150.0000px;
+  height: 86.6025px;
+  z-index: 2;
+  background: inherit;
+}
+.activate {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.hex1 {
+  
+  top:29%;
+  left:calc(50% - 75px);
+  transform:scale(1);
+  transition: transform 300ms ease-in-out, top 300ms ease-in-out,visibility 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.first {
+  top:30%;
+  left:10%;
+  margin:0;
+  padding:0;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 30px;
+  z-index:100;
+  position: absolute;
+  cursor:default;
+/*  color: white;*/
+}
+
+.second {
+  left:25%;
+}
+
+.third {
+  left:14%;
+}
+.hex2 {
+  
+  top:calc(30% + 86.6px + 43.3px);
+  left:calc(50% - 150px - 5px);
+  transform: scale(1);
+  transition: transform 300ms ease-in-out, top 300ms ease-in-out, left 300ms ease-in-out,visibility 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.hex3 {
+  
+  top:calc(30% + 86.6px + 43.3px);
+  left:calc(50% + 5px);
+  transform: scale(1);
+  transition: transform 300ms ease-in-out, top 300ms ease-in-out, left 300ms ease-in-out,visibility 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.hex1ani {
+  transform:scale(0.4);
+  top:5%;
+}
+
+.hex2ani {
+  transform:scale(0.4);
+  top:80%;
+  left:calc(50% - 150px - 5px - 35%);
+}
+
+.hex3ani {
+  transform:scale(0.4);
+  top:80%;
+  left:calc(50% - 150px - 5px - 35% + 80%)
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.about-photo {
+  position:absolute;
+  opacity: 0;
+  width:50%;
+  height:100%;
+  top: 0%;
+  left:0%;
+  margin:0;
+  padding: 0;
+  background: url(/ui/me2.png) no-repeat center center;
+  /*background-origin: content-box;*/
+/*   background-size: 20% 20%; */
+  z-index: 0;
+  transform: scale(0.5);
+  transition: opacity 300ms ease-in-out;
+}
+
+.ab1 {
+  position: absolute;
+  opacity: 0;
+  width: 40%;
+  height: 80%;
+  top: calc(5% + (0.4*150px));
+  left: 60%;
+  background: #E0EAFC; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #E0EAFC , #CFDEF3); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #E0EAFC , #CFDEF3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px;                             
+  z-index: 0;
+  transition: left 450ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.aboutani {
+  opacity:1;
+}
+
+.abani {
+  opacity: 1;
+  left: 50%;
+}
+
+.work {
+  position:absolute;
+  opacity: 0;
+  width:80%;
+  height:80%;
+  top: calc(0.4*150px);
+  left:20%;
+  background: #4b6cb7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #4b6cb7 , #182848); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #4b6cb7 , #182848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+  border-radius: 10px;
+  z-index: 0;
+  transition: left 600ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.workani {
+  opacity:1;
+  left: calc(50% - 75px - 5px - 35%);
+}
+
+.contact {
+  position:absolute;
+  opacity: 0;
+  width:80%;
+  height:80%;
+  top: calc(0.4*150px);
+  left:0%;
+  background: #eacda3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #eacda3 , #d6ae7b); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #eacda3 , #d6ae7b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px;      
+  z-index: 0;
+  transition: left 600ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.conani {
+  opacity:1;
+  left: calc(50% - 75px - 5px - 35%);
+}
+
+.texty {
+  text-align: center;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+#yuge {
+  font-size: 60px;
+}
+
+.element {
+
+  position:absolute;
+  width:20%;
+  height:70%;
+  max-width: 20%;
+  max-height: 70%;
+  background-color: #fff;
+  border-radius: 10px;
+  
+}
+
+#darkstar {
+  top:15%;
+  left:10%;
+}
+
+#enigma {
+
+  top:25%;
+  left:35%;
+}
+
+#tempp {
+
+  top:15%;
+  left:60%;
+}
+>>>>>>> 4c02b718662f8517124fc6723afba51ee2c412b0
