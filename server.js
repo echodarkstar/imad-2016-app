@@ -91,8 +91,8 @@ app.get('/img/darkstar.jpg', function (req, res) {
 app.get('/img/enigma.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'img', 'enigma.jpg'));
 });
-app.get('/img/echeresque.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'img', 'echeresque.png'));
+app.get('/img/escheresque.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'img', 'escheresque.png'));
 });
 app.get('/img/temp.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'img', 'temp.jpg'));
