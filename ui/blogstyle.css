@@ -1,0 +1,109 @@
+.hexagon1 {
+  position: absolute;
+  width: 600px; 
+  height: 346.41px;
+  margin: 173.21px 0;
+  background-image: url(../img/articlebg.jpg);
+  background-size: auto 692.8203px;
+  background-position: center;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(0,0,0,0.75);
+}
+
+.hex1Top,
+.hex1Bottom {
+  position: absolute;
+  z-index: 1;
+  width: 424.26px;
+  height: 424.26px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 87.87px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.75);
+}
+
+/*counter transform the bg image on the caps*/
+.hex1Top:after,
+.hex1Bottom:after {
+  content: "";
+  position: absolute;
+  width: 600.0000px;
+  height: 346.4101615137755px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-173.2051px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-173.2051px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-173.2051px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hex1Top {
+  top: -212.1320px;
+}
+
+.hex1Top:after {
+  background-position: center top;
+}
+
+.hex1Bottom {
+  bottom: -212.1320px;
+}
+
+.hex1Bottom:after {
+  background-position: center bottom;
+}
+
+.hexagon1:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 600.0000px;
+  height: 346.4102px;
+  z-index: 2;
+  background: inherit;
+}
+
+.hex4 {
+  top: 17%;
+  left: calc(50% - 300px);
+}
+
+.heading {
+  font-family: 'Shrikhand', cursive;
+  /*font-size: 20px;*/
+}
+
+.infront {
+  background-color: white; 
+  z-index:100;
+  position: absolute;
+  top: 30%;
+  padding-left: 20%;
+  padding-right:20%;
+}
+
+.acontent {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+
+.r-arrow {
+  position: absolute;
+  z-index: 100;
+  right: -15%;
+  top: 30%;
+  font-size: 30px;
+}
+
+.l-arrow {
+  position: absolute;
+  z-index: 100;
+  left: -15%;
+  top: 30%;
+  font-size: 30px;
+}
