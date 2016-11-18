@@ -1,4 +1,5 @@
 $(function(){
+    $('.hexagon1').toggleClass('aimg1');
 	$('.work').find('a').bind('click',false);
 	$('.work').find('a').addClass('disable');
 	$('p').toggleClass('.noselect');
