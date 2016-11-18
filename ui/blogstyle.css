@@ -107,3 +107,7 @@
   top: 30%;
   font-size: 30px;
 }
+.aimg1 {
+  background-image: url(../img/articlebg.jpg);
+  opacity:1;
+}
